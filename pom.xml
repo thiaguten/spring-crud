@@ -10,8 +10,8 @@
 
     <name>spring-crud</name>
     <description>Java EE 7 WebApplication - Spring 4.x + JPA 2.1.x + HikariCP 2.x</description>
-
     <url>https://github.com/thiaguten/spring-crud</url>
+
     <inceptionYear>2015</inceptionYear>
 
     <properties>
