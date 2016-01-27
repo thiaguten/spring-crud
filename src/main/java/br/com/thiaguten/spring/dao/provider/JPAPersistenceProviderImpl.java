@@ -32,7 +32,7 @@
 package br.com.thiaguten.spring.dao.provider;
 
 import br.com.thiaguten.persistence.Persistable;
-import br.com.thiaguten.persistence.provider.jpa.JPAPersistenceProvider;
+import br.com.thiaguten.persistence.spi.provider.jpa.JPAPersistenceProvider;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;

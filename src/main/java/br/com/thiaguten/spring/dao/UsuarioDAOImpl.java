@@ -32,7 +32,7 @@
 package br.com.thiaguten.spring.dao;
 
 import br.com.thiaguten.persistence.dao.GenericBaseDAO;
-import br.com.thiaguten.persistence.provider.PersistenceProvider;
+import br.com.thiaguten.persistence.spi.PersistenceProvider;
 import br.com.thiaguten.spring.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

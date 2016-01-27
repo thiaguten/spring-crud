@@ -35,23 +35,28 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
-import java.util.Enumeration;
-import java.util.Properties;
-import java.util.PropertyResourceBundle;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public abstract class ResourceUtils {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ResourceUtils.class);
 
-    public static ResourceBundle getResource(String resource) {
+    public static ResourceBundle getResource(String resource, Locale locale) {
         ResourceBundle resourceBundle = null;
         try {
-            resourceBundle = ResourceBundle.getBundle(resource);
+            if (locale != null) {
+                resourceBundle = ResourceBundle.getBundle(resource, locale);
+            } else {
+                resourceBundle = ResourceBundle.getBundle(resource);
+            }
         } catch (Exception e) {
             LOGGER.error("Erro ao tentar carregar o recurso " + resource + ".properties", e);
         }
         return resourceBundle;
+    }
+
+    public static ResourceBundle getResource(String resource) {
+        return getResource(resource, null);
     }
 
     public static PropertyResourceBundle getPropertyResourceBundle(InputStream inputStream) {

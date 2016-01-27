@@ -32,7 +32,7 @@
             <props>
                 <prop key="url">jdbc:hsqldb:mem:springcruddb;shutdown=true</prop>
                 <prop key="user">SA</prop>
-                <prop key="password"></prop>
+                <prop key="password">SA</prop>
             </props>
         </property>
     </bean>

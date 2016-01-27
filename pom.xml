@@ -28,7 +28,7 @@
         <taglibs-standard.version>1.1.2</taglibs-standard.version>
 
         <hibernate-validator.version>5.2.2.Final</hibernate-validator.version>
-        <simple-dao.version>1.0.1</simple-dao.version>
+        <simple-dao-jpa.version>1.0.0</simple-dao-jpa.version>
         <hikariCP.version>2.4.3</hikariCP.version>
         <hsqldb.version>2.3.2</hsqldb.version>
         <spring.version>4.2.4.RELEASE</spring.version>
@@ -110,8 +110,8 @@
         <!-- persistence -->
         <dependency>
             <groupId>br.com.thiaguten.persistence</groupId>
-            <artifactId>simple-dao</artifactId>
-            <version>${simple-dao.version}</version>
+            <artifactId>simple-dao-jpa</artifactId>
+            <version>${simple-dao-jpa.version}</version>
         </dependency>
 
         <!-- connection pool -->
@@ -191,7 +191,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+                <version>3.5</version>
                 <inherited>true</inherited>
                 <configuration>
                     <source>${java.version}</source>

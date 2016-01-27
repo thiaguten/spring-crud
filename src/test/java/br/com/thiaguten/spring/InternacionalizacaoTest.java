@@ -72,7 +72,7 @@ public class InternacionalizacaoTest {
     }
 
     private void resourceBundleTest(String basename, Locale locale) {
-        ResourceBundle bundle = ResourceUtils.getResource(basename);
+        ResourceBundle bundle = ResourceUtils.getResource(basename, locale);
         Properties properties = ResourceUtils.convertResourceBundleToProperties(bundle);
         for (Map.Entry<Object, Object> entrySet : properties.entrySet()) {
             Object key = entrySet.getKey();
