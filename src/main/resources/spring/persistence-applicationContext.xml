@@ -19,7 +19,7 @@
 
     <context:component-scan base-package="br.com.thiaguten.spring.dao"/>
 
-    <!-- HikariCP configuration -->
+    <!-- HikariCP connection pool configuration -->
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
         <property name="poolName" value="SpringHikariCP"/>
 
@@ -44,7 +44,6 @@
     <!-- JPA EntityManagerFactory configuration -->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <!--<property name="persistenceUnitName" value="jpa-webapp"/>-->
         <property name="packagesToScan" value="br.com.thiaguten.spring.model"/>
         <!--<property name="loadTimeWeaver" ref="loadTimeWeaver"/>-->
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
